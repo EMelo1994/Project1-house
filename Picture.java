@@ -15,6 +15,7 @@ public class Picture
     private Square window;
     private Triangle roof;
     private Circle sun;
+    private Person person;
 
     /**
      * Constructor for objects of class Picture
@@ -29,30 +30,56 @@ public class Picture
      */
     public void draw()
     {
+        person = new Person();
+        person.makeVisible();
+        
         wall = new Square();
-        wall.moveHorizontal(-140);
+        wall.moveHorizontal(-170);
         wall.moveVertical(20);
         wall.changeSize(120);
         wall.makeVisible();
         
         window = new Square();
         window.changeColor("black");
-        window.moveHorizontal(-120);
+        window.moveHorizontal(-130);
         window.moveVertical(40);
         window.changeSize(40);
         window.makeVisible();
 
-        roof = new Triangle();  
+        roof = new Triangle();
+        roof.changeColor("yellow");
         roof.changeSize(60, 180);
-        roof.moveHorizontal(20);
+        roof.moveHorizontal(30);
         roof.moveVertical(-60);
         roof.makeVisible();
+        
+        roof = new Triangle();  
+        roof.changeColor("yellow");
+        roof.changeSize(60, 180);
+        roof.moveHorizontal(-60);
+        roof.moveVertical(-60);
+        roof.makeVisible();
+        
+         roof = new Triangle();  
+         roof.changeColor("yellow");
+        roof.changeSize(60, 180);
+        roof.moveHorizontal(-18);
+        roof.moveVertical(-110);
+        roof.makeVisible();
 
+        
         sun = new Circle();
-        sun.changeColor("yellow");
+        sun.changeColor("green");
+        sun.moveHorizontal(-300);
+        sun.moveVertical(130);
+        sun.changeSize(800);
+        sun.makeVisible();
+        
+        sun = new Circle();
+        sun.changeColor("green");
         sun.moveHorizontal(100);
         sun.moveVertical(-40);
-        sun.changeSize(80);
+        sun.changeSize(800);
         sun.makeVisible();
     }
 
